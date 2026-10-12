@@ -1,0 +1,22 @@
+.product-card{flex:0 0 min(78%,366px);scroll-snap-align:start;display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-4);background:var(--color-sand-20);border:1.5px solid var(--color-sand);border-radius:var(--radius-card);transition:box-shadow var(--transition)}
+.product-card__media{position:relative;overflow:hidden;border-radius:var(--radius-img);aspect-ratio:334/364}
+.product-card__media img{width:100%;height:100%;object-fit:cover;transition:transform var(--transition)}
+.product-card__fav{position:absolute;top:18px;right:18px;width:2.75rem;height:2.75rem}
+.product-card__fav input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;z-index:1}
+.product-card__fav-icon{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:transparent;pointer-events:none}
+.product-card__fav-icon svg{width:33px;height:33px;fill:none;stroke:var(--color-bg);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+.product-card__fav input:checked + .product-card__fav-icon svg{fill:var(--color-bg)}
+.product-card__fav input:focus-visible + .product-card__fav-icon{outline:var(--focus-ring);outline-offset:3px}
+.product-card__title{font-family:var(--font-body);font-weight:600;font-size:var(--fs-card-title);line-height:1.15}
+.product-card__desc{font-family:var(--font-body);font-size:var(--fs-lg);line-height:1.4;color:var(--color-maroon)}
+.product-card__row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.product-card__price{font-weight:600;font-size:var(--fs-lg);color:var(--color-maroon)}
+.product-card__btn{display:inline-flex;align-items:center;min-height:2.75rem;padding:10px 26px;border-radius:var(--radius-btn);background:var(--color-maroon);color:var(--color-white);font-weight:500;font-size:var(--fs-sm);transition:transform var(--transition),background-color var(--transition)}
+@media (hover:hover){
+  .product-card:hover{box-shadow:0 12px 28px rgba(48,38,28,.15)}
+  .product-card:hover .product-card__media img{transform:scale(1.03)}
+  .product-card__btn:hover{transform:translateY(-2px);background-color:var(--color-espresso)}
+}
+@media (min-width:768px){.product-card{flex-basis:calc((100% - 2*var(--space-1))/2.5)}}
+@media (min-width:1024px){.product-card{flex-basis:calc((100% - 3*var(--space-1))/4)}}
+.product-card__media picture{display:block;height:100%}

@@ -1,0 +1,2 @@
+.container{width:min(100% - 2*var(--gutter),var(--container));margin-inline:auto}
+.section__title{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);text-transform:uppercase;letter-spacing:.04em;text-align:center}

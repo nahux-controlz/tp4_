@@ -1,0 +1,10 @@
+.promo{position:relative;background:var(--color-sand);overflow:hidden;min-height:335px;display:grid;place-items:center;padding-block:var(--space-14)}
+.promo__img{display:none;position:absolute;bottom:0;height:335px;width:auto;object-fit:cover;mix-blend-mode:multiply}
+.promo__img--left{left:0}.promo__img--right{right:0}
+.promo__content{position:relative;display:flex;flex-direction:column;align-items:center;gap:var(--space-6);text-align:center;max-width:372px;margin-inline:auto}
+.promo__title{font-family:var(--font-display);font-weight:600;font-size:var(--fs-cta);line-height:1.25;color:var(--color-black)}
+.promo__btn{width:258px;max-width:100%;height:51px;background:var(--color-espresso);color:var(--color-bg);font-family:var(--font-body);font-weight:500;font-size:var(--fs-base)}
+.promo__btn img{width:20px;height:20px}
+@media (min-width:768px){.promo__img--left{display:block;width:200px}}
+@media (min-width:1024px){.promo__img--left{width:520px}.promo__img--right{display:block;width:503px}}
+@media (hover:hover){.promo__btn:hover{transform:translateY(-2px);background-color:var(--color-maroon)}}
